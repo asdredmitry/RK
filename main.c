@@ -314,6 +314,70 @@ void write_data(vector * t, vector * s1, vector * s2)
     }
     fclose(output);
 }
+void find_zero(double t1, double t2, double y11, double y12, double y21, double y22, double eps,double * rest, double * resy1, double * resy2)
+{
+    double tmp;
+    double tmpy1, tmpy2;
+    while(fabs(t1 - t2) > eps)
+    {
+        tmp = (t1 - y12*(t2 - t1)/(y22 - y12));
+        double h = t1 - tmp;
+        dorman_prince(h, y11, y12, t1, &tmpy1, &tmpy2, NULL, NULL);
+        t2 = t1;
+        t1 = tmp;
+        y21 = y11;
+        y22 = y12;
+        y11 = tmpy1;
+        y12 = tmpy2;
+    }
+    *rest = t1;
+    *resy1 = y11;
+    *resy2 = y12;
+}
+double find_period(double l, double r_max, double y1, double y2)
+{
+    double h, err, tol;
+    double resy1, resy2, resy1_, resy2_;
+    double zt, zy1, zy2;
+    vector zero_t;
+    vector zero_y1;
+    vector zero_y2;
+    init(&zero_t, 100);
+    init(&zero_y1, 100);
+    init(&zero_y2, 100);
+    h = 0.001;
+    tol = 1e-9;
+    while(l < r_max)
+    {
+        dorman_prince(h, y1, y2, l, &resy1, &resy2, &resy1_, &resy2_);
+        //printf("%17g %17g \n", resy1 - resy1_, resy2 - resy2_);
+        err = norm(resy1, resy2, resy1_, resy2_)/(pow(2, 9) - 1);
+        if(err < tol)
+        {
+            l += h;
+            if(y2*resy2 < 0 && y2 > resy2)
+            {
+                find_zero(l - h, l, y1, y2, resy1, resy2, tol, &zt, &zy1, &zy2);
+                push_back(&zero_t, zt);
+                push_back(&zero_y1, zy1);
+                push_back(&zero_y2, zy2);
+                if(zero_t.used > 1 && norm(zero_y1.data[0], zero_y2.data[0], zero_y1.data[zero_y1.used - 2], zero_y2.data[zero_y2.used - 2]) < 0.001)
+                {
+                    return zero_t.data[zero_t.used - 1] - zero_t.data[zero_t.used - 2];
+                }
+            }
+            h = get_h(h, err, tol);
+            h = min(h, 0.001);
+            y1 = resy1;
+            y2 = resy2;
+        }
+        else 
+        {
+            h = get_h(h, err, tol);
+            h = min(h, 0.001);
+        }
+    }
+}
 void print_statistics(vector * t, vector * s1, vector * s2, double tol)
 {
     double h;
@@ -347,7 +411,7 @@ int main(void)
     printf("Enter l, r, y1, y2");
     scanf("%lf %lf %lf %lf", &l, &r, &y1, &y2);
     r *= M_PI;
-    solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
+    /*solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
     solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
     solve_rk(l, r, y1, y2, tol, &t_rk6, &s1_rk6, &s2_rk6, 6);
     solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
@@ -364,5 +428,7 @@ int main(void)
     //free_vec(&t);
     //free_vec(&s1);
     //free_vec(&s2);
+    */
+    printf(" \n %lf \n", find_period(l, r, y1, y2));
     return 0;
 }

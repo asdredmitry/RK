@@ -1,21 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-void reall(double ** data)
+#include <math.h>
+const double EPS = 1e-10;
+double f(double t)
 {
-	int i = 0;
-	data[0] = (double *)malloc(4*sizeof(double));
-	for(i = 0; i < 4; i++)
-		data[0][i] = i;
-	data[0] = realloc(data[0], sizeof(double)*10);
+	return cos(t);
 }
-int main(void)
+double xi(double x1, double x2)
 {
-	int i;
-	double * data;
-	reall(&data);
-	for(i = 0; i < 10; i++)
-		printf("%lf ", data[i]);
-	free(data);
+	return (x1 - f(x1)*(x2 - x1)/(f(x2) - f(x1)));
+}
+double find_zero(double t1, double t2, double eps)
+{
+	double tmp = t2;
+	while(fabs(t1 - t2) > eps)
+	{
+		tmp = xi(t1, t2);
+		t2 = t1;
+		t1 = tmp;
+	}
+	return tmp;
+}
+int main()
+{
+	printf("%lf \n", find_zero(4.5, 6, EPS));
 	return 0;
 }
-		 
