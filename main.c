@@ -71,7 +71,8 @@ double f1(double t, double y1, double y2)
 }
 double f2(double t, double y1, double y2)
 {
-    return -y1;
+    return -sin(t);
+    //return -(1 + 0.2*y1*y1)*y1 + cos(t);
 }
 double check_sol(double t)
 {
@@ -95,6 +96,8 @@ double fmin(double x1, double x2)
 {
     return min(fabs(x1), fabs(x2));
 }
+
+
 double get_h(double h, double err, double tol)
 {
     double fac, facmax, facmin;
@@ -112,6 +115,8 @@ double norm(double x1, double y1, double x2, double y2)
 {
     return fmax(x1 - x2, y1 - y2);
 }
+
+
 void dorman_prince(double h, double y1, double y2, double t, double * resy1, double * resy2, double * resy1_, double * resy2_)
 {
     double tmpt, tmpy1, tmpy2;
@@ -133,7 +138,6 @@ void dorman_prince(double h, double y1, double y2, double t, double * resy1, dou
         k1[i] = f1(tmpt, tmpy1, tmpy2);
         k2[i] = f2(tmpt, tmpy1, tmpy2);
     }
-
     if(resy1 != NULL && resy2 != NULL)
     {
         tmpy1 = 0;
@@ -220,13 +224,14 @@ void solve_dp(double l, double r, double y1, double y2, double tol, vector * t, 
             h = r - l;
         dorman_prince(h, y1, y2, l, &resy1, &resy2, &resy1_, &resy2_);
         //printf("%17g %17g \n", resy1 - resy1_, resy2 - resy2_);
-        err = norm(resy1, resy2, resy1_, resy2_)/(pow(2, 9) - 1);
+        err = norm(resy1, resy2, resy1_, resy2_);
         if(err < tol)
         {
+            printf("%17g \n", h);
             l += h;
             push_back(t, l);
-            push_back(s1, resy1);
-            push_back(s2, resy2);
+            push_back(s1, resy1_);
+            push_back(s2, resy2_);
             y1 = resy1;
             y2 = resy2;
             h = get_h(h, err, tol);
@@ -292,7 +297,12 @@ void solve_rk(double l, double r, double y1, double y2, double tol, vector * t, 
             h = get_h(h, err, tol);
         }
     }
-
+}
+void swap(double * x, double * y)
+{
+    double tmp = x[0];
+    x[0] = y[0];
+    y[0] = tmp;
 }
 double norm_full(vector * t, vector * s1)
 {
@@ -304,10 +314,10 @@ double norm_full(vector * t, vector * s1)
     }
     return max;
 }
-void write_data(vector * t, vector * s1, vector * s2)
+void write_data(vector * t, vector * s1, vector * s2, const char * name)
 {
     int i;
-    FILE * output = fopen("data.dat", "w");
+    FILE * output = fopen(name, "w");
     for(i = 0; i < t->used; i++)
     {
         fprintf(output, "%17g %17g %17g \n", t->data[i], s1->data[i], s2->data[i]);
@@ -318,17 +328,42 @@ void find_zero(double t1, double t2, double y11, double y12, double y21, double 
 {
     double tmp;
     double tmpy1, tmpy2;
-    while(fabs(t1 - t2) > eps)
+    double prev, cur;
+    prev = 1000;
+    cur = 1;
+    while(fabs(prev - cur) > eps)
     {
         tmp = (t1 - y12*(t2 - t1)/(y22 - y12));
-        double h = t1 - tmp;
+        double h = tmp - t1;
         dorman_prince(h, y11, y12, t1, &tmpy1, &tmpy2, NULL, NULL);
-        t2 = t1;
-        t1 = tmp;
-        y21 = y11;
-        y22 = y12;
-        y11 = tmpy1;
-        y12 = tmpy2;
+        if(y22*tmpy2 < 0)
+        {
+            prev = t1;
+            cur = tmp;
+            t1 = tmp;
+            y11 = tmpy1;
+            y12 = tmpy2;
+            if(t1 > t2)
+            {
+                swap(&t1, &t2);
+                swap(&y11, &y21);
+                swap(&y12, &y22);                
+            }
+        }
+        else
+        {
+            prev = t2;
+            cur = tmp;
+            t2 = tmp;
+            y21 = tmpy1;
+            y22 = tmpy2;
+            if(t1 > t2)
+            {
+                swap(&t1, &t2);
+                swap(&y11, &y21);
+                swap(&y12, &y22);                
+            }
+        }
     }
     *rest = t1;
     *resy1 = y11;
@@ -336,6 +371,7 @@ void find_zero(double t1, double t2, double y11, double y12, double y21, double 
 }
 double find_period(double l, double r_max, double y1, double y2)
 {
+    int counter = 0;
     double h, err, tol;
     double resy1, resy2, resy1_, resy2_;
     double zt, zy1, zy2;
@@ -345,38 +381,47 @@ double find_period(double l, double r_max, double y1, double y2)
     init(&zero_t, 100);
     init(&zero_y1, 100);
     init(&zero_y2, 100);
-    h = 0.001;
-    tol = 1e-9;
+    h = 0.1;
+    tol = 1e-11;
     while(l < r_max)
     {
+        //if(counter % 1000000 == 0)
+        //    printf("%lf \n", l);
         dorman_prince(h, y1, y2, l, &resy1, &resy2, &resy1_, &resy2_);
         //printf("%17g %17g \n", resy1 - resy1_, resy2 - resy2_);
-        err = norm(resy1, resy2, resy1_, resy2_)/(pow(2, 9) - 1);
+        err = norm(resy1, resy2, resy1_, resy2_);
         if(err < tol)
         {
             l += h;
             if(y2*resy2 < 0 && y2 > resy2)
             {
-                find_zero(l - h, l, y1, y2, resy1, resy2, tol, &zt, &zy1, &zy2);
+                find_zero(l - h, l, y1, y2, resy1, resy2, 1e-12, &zt, &zy1, &zy2);
                 push_back(&zero_t, zt);
                 push_back(&zero_y1, zy1);
                 push_back(&zero_y2, zy2);
-                if(zero_t.used > 1 && norm(zero_y1.data[0], zero_y2.data[0], zero_y1.data[zero_y1.used - 2], zero_y2.data[zero_y2.used - 2]) < 0.001)
+                if(zero_t.used > 1 && norm(zero_y1.data[0], zero_y2.data[0], zero_y1.data[zero_y1.used - 1], zero_y2.data[zero_y2.used - 1]) < 1e-5)
                 {
-                    return zero_t.data[zero_t.used - 1] - zero_t.data[zero_t.used - 2];
+                    goto out;
+                    //printf(" \n %lf %lf \n", zero_t.data[0], zero_t.data[zero_t.used - 1]);
+                    //return zero_t.data[0] - zero_t.data[zero_t.used - 1];
                 }
             }
             h = get_h(h, err, tol);
-            h = min(h, 0.001);
+            h = min(h, 0.1);
             y1 = resy1;
             y2 = resy2;
         }
         else 
         {
             h = get_h(h, err, tol);
-            h = min(h, 0.001);
+            h = min(h, 0.1);
         }
     }
+    write_data(&zero_t, &zero_y1, &zero_y2, "zeroes.dat");
+    return -1;
+    out:
+    write_data(&zero_t, &zero_y1, &zero_y2, "zeroes.dat");
+    return (-zero_t.data[0] + zero_t.data[zero_t.used - 1]);
 }
 void print_statistics(vector * t, vector * s1, vector * s2, double tol)
 {
@@ -407,28 +452,27 @@ int main(void)
     int n;
     double l, r, y1, y2;
     double tol;
-    tol = 0.000000001;
+    tol = 1e-9;
     printf("Enter l, r, y1, y2");
     scanf("%lf %lf %lf %lf", &l, &r, &y1, &y2);
-    r *= M_PI;
-    /*solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
-    solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
+    //r *= M_PI;
+    //solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
+    //solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
     solve_rk(l, r, y1, y2, tol, &t_rk6, &s1_rk6, &s2_rk6, 6);
-    solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
-    //write_data(&t, &s1, &s2);
-    print_statistics(&t_rk6, &s1_rk6, &s2_rk6, tol);
+    //solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
+    write_data(&t_dp, &s1_rk6, &s2_rk6, "data.dat");
+    //print_statistics(&t_rk6, &s1_rk6, &s2_rk6, tol);
     printf("Global mistake : %17g \n", norm_full(&t_rk6, &s1_rk6));
-    print_statistics(&t_rk7, &s1_rk7, &s2_rk7, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk7, &s1_rk7));
-    print_statistics(&t_rk8, &s1_rk8, &s2_rk8, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk8, &s1_rk8));
-    print_statistics(&t_dp, &s1_dp, &s2_dp, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_dp, &s1_dp));
+    //print_statistics(&t_rk7, &s1_rk7, &s2_rk7, tol);
+    //printf("Global mistake : %17g \n", norm_full(&t_rk7, &s1_rk7));
+    //print_statistics(&t_rk8, &s1_rk8, &s2_rk8, tol);
+    //printf("Global mistake : %17g \n", norm_full(&t_rk8, &s1_rk8));
+    //print_statistics(&t_dp, &s1_dp, &s2_dp, tol);
+    //printf("Global mistake : %17g \n", norm_full(&t_dp, &s1_dp));
 
     //free_vec(&t);
     //free_vec(&s1);
     //free_vec(&s2);
-    */
     printf(" \n %lf \n", find_period(l, r, y1, y2));
     return 0;
 }
