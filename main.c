@@ -71,12 +71,12 @@ double f1(double t, double y1, double y2)
 }
 double f2(double t, double y1, double y2)
 {
-    return -sin(t);
+    return -4*y1;
     //return -(1 + 0.2*y1*y1)*y1 + cos(t);
 }
 double check_sol(double t)
 {
-    return sin(t);
+    return sin(2*t);
 }
 
 
@@ -227,7 +227,7 @@ void solve_dp(double l, double r, double y1, double y2, double tol, vector * t, 
         err = norm(resy1, resy2, resy1_, resy2_);
         if(err < tol)
         {
-            printf("%17g \n", h);
+            //printf("%17g \n", h);
             l += h;
             push_back(t, l);
             push_back(s1, resy1_);
@@ -324,54 +324,17 @@ void write_data(vector * t, vector * s1, vector * s2, const char * name)
     }
     fclose(output);
 }
-void find_zero(double t1, double t2, double y11, double y12, double y21, double y22, double eps,double * rest, double * resy1, double * resy2)
+void find_zero(double t1, double t2, double y11, double y12, double y21, double y22, double eps,double * rest)
 {
-    double tmp;
-    double tmpy1, tmpy2;
-    double prev, cur;
-    prev = 1000;
-    cur = 1;
-    while(fabs(prev - cur) > eps)
+    while(fabs(y22) > eps)
     {
-        tmp = (t1 - y12*(t2 - t1)/(y22 - y12));
-        double h = tmp - t1;
-        dorman_prince(h, y11, y12, t1, &tmpy1, &tmpy2, NULL, NULL);
-        if(y22*tmpy2 < 0)
-        {
-            prev = t1;
-            cur = tmp;
-            t1 = tmp;
-            y11 = tmpy1;
-            y12 = tmpy2;
-            if(t1 > t2)
-            {
-                swap(&t1, &t2);
-                swap(&y11, &y21);
-                swap(&y12, &y22);                
-            }
-        }
-        else
-        {
-            prev = t2;
-            cur = tmp;
-            t2 = tmp;
-            y21 = tmpy1;
-            y22 = tmpy2;
-            if(t1 > t2)
-            {
-                swap(&t1, &t2);
-                swap(&y11, &y21);
-                swap(&y12, &y22);                
-            }
-        }
+        t2 = t2 - y22*(t2 - t1)/(y22 - y12);
+        dorman_prince(t2 - t1, y11, y12, t1, &y21, &y22, NULL, NULL);
     }
-    *rest = t1;
-    *resy1 = y11;
-    *resy2 = y12;
+    *rest = t2;
 }
 double find_period(double l, double r_max, double y1, double y2)
 {
-    int counter = 0;
     double h, err, tol;
     double resy1, resy2, resy1_, resy2_;
     double zt, zy1, zy2;
@@ -382,7 +345,7 @@ double find_period(double l, double r_max, double y1, double y2)
     init(&zero_y1, 100);
     init(&zero_y2, 100);
     h = 0.1;
-    tol = 1e-11;
+    tol = 1e-9;
     while(l < r_max)
     {
         //if(counter % 1000000 == 0)
@@ -395,11 +358,12 @@ double find_period(double l, double r_max, double y1, double y2)
             l += h;
             if(y2*resy2 < 0 && y2 > resy2)
             {
-                find_zero(l - h, l, y1, y2, resy1, resy2, 1e-12, &zt, &zy1, &zy2);
+                find_zero(l - h, l, y1, y2, resy1, resy2, 1e-8, &zt);
+                dorman_prince(zt - (l - h), y1, y2, (l - h), &zy1, &zy2, NULL, NULL);
                 push_back(&zero_t, zt);
                 push_back(&zero_y1, zy1);
                 push_back(&zero_y2, zy2);
-                if(zero_t.used > 1 && norm(zero_y1.data[0], zero_y2.data[0], zero_y1.data[zero_y1.used - 1], zero_y2.data[zero_y2.used - 1]) < 1e-5)
+                if(zero_t.used > 1 && norm(zero_y1.data[0], zero_y2.data[0], zero_y1.data[zero_y1.used - 1], zero_y2.data[zero_y2.used - 1]) < 1e-3)
                 {
                     goto out;
                     //printf(" \n %lf %lf \n", zero_t.data[0], zero_t.data[zero_t.used - 1]);
@@ -443,36 +407,59 @@ void print_statistics(vector * t, vector * s1, vector * s2, double tol)
     printf("Min h - %17g ; Max h - %17g ; Mid - %17g \n", min_h, max_h, e_h);
     printf("Amount - %d \n", t->used);
 }
-int main(void)
+void compare_methods(double l, double r, double tol, double y1, double y2)
 {
     vector t_rk6, s1_rk6, s2_rk6;
     vector t_rk8, s1_rk8, s2_rk8;
     vector t_rk7, s1_rk7, s2_rk7;
     vector t_dp, s1_dp, s2_dp;
-    int n;
+    r *= M_PI;
+    solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
+    solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
+    solve_rk(l, r, y1, y2, tol, &t_rk6, &s1_rk6, &s2_rk6, 6);
+    solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
+    write_data(&t_dp, &s1_dp, &s2_dp, "dormance_prince.dat");
+    write_data(&t_rk6, &s1_rk6, &s2_rk6, "runge_kutta6.dat");
+    write_data(&t_rk7, &s1_rk7, &s2_rk7, "runge_kutta7.dat");
+    write_data(&t_rk8, &s1_rk8, &s2_rk8, "runge_kutta8.dat");
+    printf("---------------------------------------------------------------- \n");
+    printf("Runge Kutta 6 order: \n");
+    print_statistics(&t_rk6, &s1_rk6, &s2_rk6, tol);
+    printf("Global mistake : %17g \n", norm_full(&t_rk6, &s1_rk6));
+    printf("---------------------------------------------------------------- \n");
+    printf("Runge Kutta 7 order: \n");
+    print_statistics(&t_rk7, &s1_rk7, &s2_rk7, tol);
+    printf("Global mistake : %17g \n", norm_full(&t_rk7, &s1_rk7));
+    printf("----------------------------------------------------------------\n");
+    printf("Runge Kutta 8 order: \n");
+    print_statistics(&t_rk8, &s1_rk8, &s2_rk8, tol);
+    printf("Global mistake : %17g \n", norm_full(&t_rk8, &s1_rk8));
+    printf("---------------------------------------------------------------- \n");
+    printf("Dorman Prince 7 order: \n");
+    print_statistics(&t_dp, &s1_dp, &s2_dp, tol);
+    printf("Global mistake : %17g \n", norm_full(&t_dp, &s1_dp));
+    printf("----------------------------------------------------------------\n");
+    free_vec(&t_dp);
+    free_vec(&s1_dp);
+    free_vec(&s2_dp);
+    free_vec(&t_rk6);
+    free_vec(&s1_rk6);
+    free_vec(&s2_rk6);
+    free_vec(&t_rk7);
+    free_vec(&s1_rk7);
+    free_vec(&s2_rk7);
+    free_vec(&t_rk8);
+    free_vec(&s1_rk8);
+    free_vec(&s2_rk8);
+}
+int main(void)
+{
     double l, r, y1, y2;
     double tol;
     tol = 1e-9;
     printf("Enter l, r, y1, y2");
     scanf("%lf %lf %lf %lf", &l, &r, &y1, &y2);
-    //r *= M_PI;
-    //solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
-    //solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
-    solve_rk(l, r, y1, y2, tol, &t_rk6, &s1_rk6, &s2_rk6, 6);
-    //solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
-    write_data(&t_dp, &s1_rk6, &s2_rk6, "data.dat");
-    //print_statistics(&t_rk6, &s1_rk6, &s2_rk6, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk6, &s1_rk6));
-    //print_statistics(&t_rk7, &s1_rk7, &s2_rk7, tol);
-    //printf("Global mistake : %17g \n", norm_full(&t_rk7, &s1_rk7));
-    //print_statistics(&t_rk8, &s1_rk8, &s2_rk8, tol);
-    //printf("Global mistake : %17g \n", norm_full(&t_rk8, &s1_rk8));
-    //print_statistics(&t_dp, &s1_dp, &s2_dp, tol);
-    //printf("Global mistake : %17g \n", norm_full(&t_dp, &s1_dp));
-
-    //free_vec(&t);
-    //free_vec(&s1);
-    //free_vec(&s2);
-    printf(" \n %lf \n", find_period(l, r, y1, y2));
+    //compare_methods(l, r, tol, y1, y2);
+    //printf("%lf ", find_period(l, r, y1, y2));
     return 0;
 }
