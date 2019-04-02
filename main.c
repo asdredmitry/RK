@@ -69,10 +69,8 @@ int main(void)
     tol = 1e-9;
     printf("Enter l, r, t0, y1, y2: ");
     scanf("%lf %lf %lf %lf %lf", &l, &r, &t0, &y1, &y2);
-    compare_methods(l, r, tol, y1, y2);
-    solve_dp(l, r, t0, y1, y2, tol, &t, &s1, &s2);
+    solve_rk(l, r, y1, y2, tol, &t, &s1, &s2, 6);
     write_data(&t, &s1, &s2, "data.dat");
-    printf("%16g ", find_period(l, r, y1, y2));
     free_vec(&t);
     free_vec(&s1);
     free_vec(&s2);
@@ -127,8 +125,8 @@ double f1(double t, double y1, double y2)
 }
 double f2(double t, double y1, double y2)
 {
-    return -16*y1;
-    //return -(1 + 0.2*y1*y1)*y1 + cos(t);
+    //return -16*y1;
+    return -(1 + 100*y1*y1)*y1 + cos(t);
     return y1;
     return y2;
     return t;
