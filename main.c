@@ -71,12 +71,12 @@ double f1(double t, double y1, double y2)
 }
 double f2(double t, double y1, double y2)
 {
-    return -4*y1;
-    //return -(1 + 0.2*y1*y1)*y1 + cos(t);
+    return -y1;
+    //return -(1 - 0.2*y1*y1)*y1 + cos(t);
 }
 double check_sol(double t)
 {
-    return sin(2*t);
+    return sin(t);
 }
 
 
@@ -223,11 +223,9 @@ void solve_dp(double l, double r, double y1, double y2, double tol, vector * t, 
         if(l + h > r)
             h = r - l;
         dorman_prince(h, y1, y2, l, &resy1, &resy2, &resy1_, &resy2_);
-        //printf("%17g %17g \n", resy1 - resy1_, resy2 - resy2_);
         err = norm(resy1, resy2, resy1_, resy2_);
         if(err < tol)
         {
-            //printf("%17g \n", h);
             l += h;
             push_back(t, l);
             push_back(s1, resy1_);
@@ -425,19 +423,23 @@ void compare_methods(double l, double r, double tol, double y1, double y2)
     printf("---------------------------------------------------------------- \n");
     printf("Runge Kutta 6 order: \n");
     print_statistics(&t_rk6, &s1_rk6, &s2_rk6, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk6, &s1_rk6));
+    printf("Max err : %17g \n", norm_full(&t_rk6, &s1_rk6));
+    printf("Glob err : %17g \n", fabs(s1_rk6.data[s1_rk6.used - 1] - check_sol(t_rk6.data[s1_rk6.used - 1])));
     printf("---------------------------------------------------------------- \n");
     printf("Runge Kutta 7 order: \n");
     print_statistics(&t_rk7, &s1_rk7, &s2_rk7, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk7, &s1_rk7));
+    printf("Max err : %17g \n", norm_full(&t_rk7, &s1_rk7));
+    printf("Glob err : %17g \n", fabs(s1_rk7.data[s1_rk7.used - 1] - check_sol(t_rk7.data[s1_rk7.used - 1])));
     printf("----------------------------------------------------------------\n");
     printf("Runge Kutta 8 order: \n");
     print_statistics(&t_rk8, &s1_rk8, &s2_rk8, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_rk8, &s1_rk8));
+    printf("Max err : %17g \n", norm_full(&t_rk8, &s1_rk8));
+    printf("Glob err : %17g \n", fabs(s1_rk8.data[s1_rk8.used - 1] - check_sol(t_rk8.data[s1_rk8.used - 1])));
     printf("---------------------------------------------------------------- \n");
     printf("Dorman Prince 7 order: \n");
     print_statistics(&t_dp, &s1_dp, &s2_dp, tol);
-    printf("Global mistake : %17g \n", norm_full(&t_dp, &s1_dp));
+    printf("Max err : %17g \n", norm_full(&t_dp, &s1_dp));
+    printf("Glob err : %17g \n", fabs(s1_dp.data[s1_dp.used - 1] - check_sol(t_dp.data[s1_dp.used - 1])));
     printf("----------------------------------------------------------------\n");
     free_vec(&t_dp);
     free_vec(&s1_dp);
@@ -454,12 +456,18 @@ void compare_methods(double l, double r, double tol, double y1, double y2)
 }
 int main(void)
 {
+    vector t, s1, s2;
     double l, r, y1, y2;
     double tol;
     tol = 1e-9;
     printf("Enter l, r, y1, y2");
     scanf("%lf %lf %lf %lf", &l, &r, &y1, &y2);
-    compare_methods(l, r, tol, y1, y2);
-    //printf("%lf ", find_period(l, r, y1, y2));
+    //compare_methods(l, r, tol, y1, y2);
+    solve_dp(l, r, y1, y2, tol, &t, &s1, &s2);
+    write_data(&t, &s1, &s2, "data.dat");
+    printf("%16g ", find_period(l, r, y1, y2));
+    free_vec(&t);
+    free_vec(&s1);
+    free_vec(&s2);
     return 0;
 }
