@@ -64,6 +64,21 @@ void free_vec(vector * v)
     v->alloc = 0;
     v->data = NULL;
 }
+void invert(vector * v)
+{
+    int l,r;
+    double tmp;
+    l = 0;
+    r = v->used - 1;
+    while(l < r)
+    {
+        tmp = v->data[l];
+        v->data[l] = v->data[r];
+        v->data[r] = tmp;
+        l++;
+        r--;
+    }
+}
 
 double f1(double t, double y1, double y2)
 {
@@ -71,8 +86,8 @@ double f1(double t, double y1, double y2)
 }
 double f2(double t, double y1, double y2)
 {
-    return -y1;
-    //return -(1 - 0.2*y1*y1)*y1 + cos(t);
+    //return -y1;
+    return -(1 + 0.2*y1*y1)*y1 + cos(t);
 }
 double check_sol(double t)
 {
@@ -104,10 +119,10 @@ double get_h(double h, double err, double tol)
     fac = 0.8;
     facmax = 1.5;
     facmin = 0.0000001;
-    if(err < EPS)
+    if(fabs(err) < EPS)
         err = 2*EPS;
     h *= min(facmax, max(facmin, fac*pow(tol/err, 1./7.)));
-    if(h < EPS)
+    if(fabs(h) < EPS)
         h = 2*EPS;
     return h;
 }
@@ -207,27 +222,59 @@ void runge_kutta(double h, double y1, double y2,double t, double * resy1, double
     *resy1 = tmpy1;
     *resy2 = tmpy2;
 }
-void solve_dp(double l, double r, double y1, double y2, double tol, vector * t, vector * s1, vector * s2)
+void solve_dp(double l, double r,double t0, double y1, double y2, double tol, vector * t, vector * s1, vector * s2)
 {
-    double h, err;
+    double y1_, y2_;
+    double h, err, tmp;
     double resy1, resy2, resy1_, resy2_;
     init(t, 100);
     init(s1, 100);
     init(s2, 100);
-    h = 0.1;
-    push_back(t, l);
+    h = -0.1;
+    tmp = t0;
+    y1_ = y1;
+    y2_ = y2;
+    push_back(t, tmp);
     push_back(s1, y1);
     push_back(s2, y2);
-    while(l < r)
+    while(tmp > l)
     {
-        if(l + h > r)
-            h = r - l;
-        dorman_prince(h, y1, y2, l, &resy1, &resy2, &resy1_, &resy2_);
+        if(tmp + h < l)
+            h = l - tmp;
+        dorman_prince(h, y1, y2, tmp, &resy1, &resy2, &resy1_, &resy2_);
         err = norm(resy1, resy2, resy1_, resy2_);
         if(err < tol)
         {
-            l += h;
-            push_back(t, l);
+            tmp += h;
+            push_back(t, tmp);
+            push_back(s1, resy1_);
+            push_back(s2, resy2_);
+            y1 = resy1;
+            y2 = resy2;
+            h = get_h(h, err, tol);
+        }
+        else 
+        {
+            h = get_h(h, err, tol);
+        }
+    }
+    invert(t);
+    invert(s1);
+    invert(s2);
+    tmp = t0;
+    h = 0.1;
+    y1 = y1_;
+    y2 = y2_;
+    while(tmp < r)
+    {
+        if(tmp + h > r)
+            h = r - tmp;
+        dorman_prince(h, y1, y2, tmp, &resy1, &resy2, &resy1_, &resy2_);
+        err = norm(resy1, resy2, resy1_, resy2_);
+        if(err < tol)
+        {
+            tmp += h;
+            push_back(t, tmp);
             push_back(s1, resy1_);
             push_back(s2, resy2_);
             y1 = resy1;
@@ -413,7 +460,7 @@ void compare_methods(double l, double r, double tol, double y1, double y2)
     vector t_dp, s1_dp, s2_dp;
     r *= M_PI;
     solve_rk(l, r, y1, y2, tol, &t_rk8, &s1_rk8, &s2_rk8, 8);
-    solve_dp(l, r, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
+    solve_dp(l, r, l, y1, y2, tol, &t_dp, &s1_dp, &s2_dp);
     solve_rk(l, r, y1, y2, tol, &t_rk6, &s1_rk6, &s2_rk6, 6);
     solve_rk(l, r, y1, y2, tol, &t_rk7, &s1_rk7, &s2_rk7, 7);
     write_data(&t_dp, &s1_dp, &s2_dp, "dormance_prince.dat");
@@ -457,17 +504,17 @@ void compare_methods(double l, double r, double tol, double y1, double y2)
 int main(void)
 {
     vector t, s1, s2;
-    double l, r, y1, y2;
+    double l, r, y1, y2, t0;
     double tol;
     tol = 1e-9;
-    printf("Enter l, r, y1, y2");
-    scanf("%lf %lf %lf %lf", &l, &r, &y1, &y2);
+    printf("Enter l, r, t0, y1, y2: ");
+    scanf("%lf %lf %lf %lf %lf", &l, &r, &t0, &y1, &y2);
     //compare_methods(l, r, tol, y1, y2);
-    solve_dp(l, r, y1, y2, tol, &t, &s1, &s2);
-    write_data(&t, &s1, &s2, "data.dat");
+    //solve_dp(l, r, t0, y1, y2, tol, &t, &s1, &s2);
+    //write_data(&t, &s1, &s2, "data.dat");
     printf("%16g ", find_period(l, r, y1, y2));
-    free_vec(&t);
-    free_vec(&s1);
-    free_vec(&s2);
+    //free_vec(&t);
+    //free_vec(&s1);
+    //free_vec(&s2);
     return 0;
 }
