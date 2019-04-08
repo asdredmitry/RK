@@ -73,9 +73,9 @@ void find_zero(double t1, double t2, double y11, double y12, double y21, double 
 
 int main(void)
 {
-    find_period(0, 80000, 0, 1, 1e-11, 1e-7, WRITE_ZEROES | WRITE_PERIODS);
-    //solve_dp(0, 3.99, 0, 1, 1e-11, STEPS_COUNT, "data.dat");
-    //printRungeNumbers(0, 11000.22, 0, 1, 0);
+    find_period(0, 1000000, 0, 1, 1e-11, 1e-7, WRITE_ZEROES | WRITE_PERIODS);
+    solve_dp(0, 100, 0, 1, 1e-11, STEPS_COUNT, "data.dat");
+    printRungeNumbers(0, 100, 0, 1, 0);
     return EXIT_SUCCESS;
 }
 
