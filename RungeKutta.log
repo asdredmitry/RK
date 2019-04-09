@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.4)  9 APR 2019 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.4)  9 APR 2019 03:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,19 +6,20 @@ entering extended mode
 (./RungeKutta.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -341,7 +342,7 @@ Language: russianb 2016/02/18 1.3h Russian support for the Babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/02/24 3.9q Babel common definitions
-\babel@savecnt=\count87
+\babel@savecnt=\count88
 \U@D=\dimen103
 )
 
@@ -566,13 +567,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count90
+\leftroot@=\count91
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count92
+\DOTSCASE@=\count93
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -581,15 +582,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
 \tag@help=\toks17
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
 \andhelp@=\toks18
 \eqnshift@=\dimen107
 \alignsep@=\dimen108
@@ -637,13 +638,44 @@ Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
 LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen113
+\Gm@wd@mp=\dimen114
+\Gm@odd@mp=\dimen115
+\Gm@even@mp=\dimen116
+\Gm@layoutwidth=\dimen117
+\Gm@layoutheight=\dimen118
+\Gm@layouthoffset=\dimen119
+\Gm@layoutvoffset=\dimen120
+\Gm@dimlist=\toks28
+)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen113
-\pgfutil@tempdimb=\dimen114
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen121
+\pgfutil@tempdimb=\dimen122
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -660,10 +692,6 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks28
-)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
@@ -684,40 +712,40 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count100
+\Gread@gobject=\count104
 ))
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks31
+\pgfkeys@tmptoks=\toks32
 ))
-\pgf@x=\dimen117
-\pgf@y=\dimen118
-\pgf@xa=\dimen119
-\pgf@ya=\dimen120
-\pgf@xb=\dimen121
-\pgf@yb=\dimen122
-\pgf@xc=\dimen123
-\pgf@yc=\dimen124
+\pgf@x=\dimen125
+\pgf@y=\dimen126
+\pgf@xa=\dimen127
+\pgf@ya=\dimen128
+\pgf@xb=\dimen129
+\pgf@yb=\dimen130
+\pgf@xc=\dimen131
+\pgf@yc=\dimen132
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count101
-\c@pgf@countb=\count102
-\c@pgf@countc=\count103
-\c@pgf@countd=\count104
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
+\c@pgf@counta=\count105
+\c@pgf@countb=\count106
+\c@pgf@countc=\count107
+\c@pgf@countd=\count108
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -733,8 +761,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count105
-\pgfsyssoftpath@bigbuffer@items=\count106
+\pgfsyssoftpath@smallbuffer@items=\count109
+\pgfsyssoftpath@bigbuffer@items=\count110
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -763,12 +791,12 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen125
-\pgfmath@count=\count107
+\pgfmath@dimen=\dimen133
+\pgfmath@count=\count111
 \pgfmath@box=\box29
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -788,37 +816,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count108
+\c@pgfmathroundto@lastzeros=\count112
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen126
-\pgf@picmaxx=\dimen127
-\pgf@picminy=\dimen128
-\pgf@picmaxy=\dimen129
-\pgf@pathminx=\dimen130
-\pgf@pathmaxx=\dimen131
-\pgf@pathminy=\dimen132
-\pgf@pathmaxy=\dimen133
-\pgf@xx=\dimen134
-\pgf@xy=\dimen135
-\pgf@yx=\dimen136
-\pgf@yy=\dimen137
-\pgf@zx=\dimen138
-\pgf@zy=\dimen139
+\pgf@picminx=\dimen134
+\pgf@picmaxx=\dimen135
+\pgf@picminy=\dimen136
+\pgf@picmaxy=\dimen137
+\pgf@pathminx=\dimen138
+\pgf@pathmaxx=\dimen139
+\pgf@pathminy=\dimen140
+\pgf@pathmaxy=\dimen141
+\pgf@xx=\dimen142
+\pgf@xy=\dimen143
+\pgf@yx=\dimen144
+\pgf@yy=\dimen145
+\pgf@zx=\dimen146
+\pgf@zy=\dimen147
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen140
-\pgf@path@lasty=\dimen141
+\pgf@path@lastx=\dimen148
+\pgf@path@lasty=\dimen149
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen142
-\pgf@shorten@start@additional=\dimen143
+\pgf@shorten@end@additional=\dimen150
+\pgf@shorten@start@additional=\dimen151
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -826,19 +854,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count109
+\pgf@picture@serial@count=\count113
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen144
+\pgflinewidth=\dimen152
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen145
-\pgf@pt@y=\dimen146
-\pgf@pt@temp=\dimen147
+\pgf@pt@x=\dimen153
+\pgf@pt@y=\dimen154
+\pgf@pt@temp=\dimen155
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -854,12 +882,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen148
+\pgfarrowsep=\dimen156
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen149
-\pgf@sys@shading@range@num=\count110
+\pgf@max=\dimen157
+\pgf@sys@shading@range@num=\count114
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -890,8 +918,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen150
-\pgf@nodesepend=\dimen151
+\pgf@nodesepstart=\dimen158
+\pgf@nodesepend=\dimen159
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -905,10 +933,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen152
-\pgffor@skip=\dimen153
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@iter=\dimen160
+\pgffor@skip=\dimen161
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -916,84 +944,113 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count111
-\pgfplotmarksize=\dimen154
+\pgf@plot@mark@count=\count115
+\pgfplotmarksize=\dimen162
 )
-\tikz@lastx=\dimen155
-\tikz@lasty=\dimen156
-\tikz@lastxsaved=\dimen157
-\tikz@lastysaved=\dimen158
-\tikzleveldistance=\dimen159
-\tikzsiblingdistance=\dimen160
+\tikz@lastx=\dimen163
+\tikz@lasty=\dimen164
+\tikz@lastxsaved=\dimen165
+\tikz@lastysaved=\dimen166
+\tikzleveldistance=\dimen167
+\tikzsiblingdistance=\dimen168
 \tikz@figbox=\box35
 \tikz@figbox@bg=\box36
 \tikz@tempbox=\box37
 \tikz@tempbox@bg=\box38
-\tikztreelevel=\count112
-\tikznumberofchildren=\count113
-\tikznumberofcurrentchild=\count114
-\tikz@fig@count=\count115
+\tikztreelevel=\count116
+\tikznumberofchildren=\count117
+\tikznumberofcurrentchild=\count118
+\tikz@fig@count=\count119
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count116
-\pgfmatrixcurrentcolumn=\count117
-\pgf@matrix@numberofcolumns=\count118
+\pgfmatrixcurrentrow=\count120
+\pgfmatrixcurrentcolumn=\count121
+\pgf@matrix@numberofcolumns=\count122
 )
-\tikz@expandcount=\count119
+\tikz@expandcount=\count123
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-\c@theorem=\count120
-\c@defin=\count121
+\c@theorem=\count124
+\c@defin=\count125
  (./RungeKutta.aux
 LaTeX Font Info:    Try loading font information for T2A+cmr on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
 File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-
-LaTeX Warning: Label `tab:canonsummary' multiply defined.
-
-
-LaTeX Warning: Label `tab:canonsummary' multiply defined.
-
-
-LaTeX Warning: Label `tab:canonsummary' multiply defined.
-
-)
+))
 \openout1 = `RungeKutta.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
- ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 8.01134pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(36.98866pt, 523.53055pt, 36.98866pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=523.53055pt
+* \textheight=731.23584pt
+* \oddsidemargin=-35.28133pt
+* \evensidemargin=-35.28133pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen161
+\scratchcounter=\count126
+\scratchdimen=\dimen169
 \scratchbox=\box39
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen162
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks41
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen170
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks42
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1001,10 +1058,6 @@ Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -1042,152 +1095,207 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 62.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-Overfull \hbox (39.12383pt too wide) in paragraph at lines 62--62
- [][] 
- []
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Overfull \hbox (0.99718pt too wide) in paragraph at lines 87--88
+[]\T2A/cmr/m/n/12 Пусть s - це-лое по-ло-жи-тель-ное чис-ло, на-зы-ва-е-мое чис
+-лом ста-дий и $\OML/cmm/m/it/12 a[]; [] a[]; b[]; [] b[]; c[] [] c[]$
+ []
+
+<dp78.png, id=11, 1345.025pt x 652.4375pt>
+File: dp78.png Graphic file (type png)
+ <use dp78.png>
+Package pdftex.def Info: dp78.png used on input line 112.
+(pdftex.def)             Requested size: 523.53055pt x 253.95183pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
 
-! LaTeX Error: Illegal character in array arg.
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.141 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.141 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (78.85858pt too wide) in paragraph at lines 141--154
- [] 
  []
 
 
-! LaTeX Error: Illegal character in array arg.
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.160 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.160 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (84.64905pt too wide) in paragraph at lines 160--173
- [] 
  []
 
 
-! LaTeX Error: Illegal character in array arg.
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.179 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.179 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (90.52399pt too wide) in paragraph at lines 179--192
- [] 
  []
 
 
-! LaTeX Error: Illegal character in array arg.
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.198 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.198 \begin{tabular}{|c|c|c|c|c|СЃ|c|}
-                                       
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (96.39893pt too wide) in paragraph at lines 198--211
- [] 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--117
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+<010pi.png, id=26, 1026.83624pt x 482.55281pt>
+File: 010pi.png Graphic file (type png)
+ <use 010pi.png>
+Package pdftex.def Info: 010pi.png used on input line 163.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--165
+
+ []
+
+[2 <./dp78.png>] [3 <./010pi.png (PNG copy)>]
+<010pi23.png, id=35, 1026.83624pt x 482.55281pt>
+File: 010pi23.png Graphic file (type png)
+ <use 010pi23.png>
+Package pdftex.def Info: 010pi23.png used on input line 169.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+
+<010pi13.png, id=36, 1026.83624pt x 482.55281pt>
+File: 010pi13.png Graphic file (type png)
+ <use 010pi13.png>
+Package pdftex.def Info: 010pi13.png used on input line 174.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+ [4 <./010pi23.png (PNG copy)> <./010pi13.png (PNG copy)>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: 010pi.png Graphic file (type png)
+<use 010pi.png>
+Package pdftex.def Info: 010pi.png used on input line 201.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+File: 010pi23.png Graphic file (type png)
+ <use 010pi23.png>
+Package pdftex.def Info: 010pi23.png used on input line 206.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+File: 010pi13.png Graphic file (type png)
+ <use 010pi13.png>
+Package pdftex.def Info: 010pi13.png used on input line 211.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--214
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+
+! LaTeX Error: Unknown float option `H'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.223 \begin{figure}[H]
+                       
+Option `H' ignored and `p' used.
+
+<010pi124.png, id=43, 481.8pt x 361.35pt>
+File: 010pi124.png Graphic file (type png)
+ <use 010pi124.png>
+Package pdftex.def Info: 010pi124.png used on input line 226.
+(pdftex.def)             Requested size: 523.53055pt x 392.68376pt.
+ [6] [7 <./010pi124.png (PNG copy)>] <010pi134.png, id=51, 481.8pt x 361.35pt>
+File: 010pi134.png Graphic file (type png)
+ <use 010pi134.png>
+Package pdftex.def Info: 010pi134.png used on input line 232.
+(pdftex.def)             Requested size: 523.53055pt x 392.68376pt.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -1196,149 +1304,40 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215 \textbf
-             {Р“СЂР°С„РёРєРё РіР°СЂРјРѕРЅРёС‡РµСЃРєРѕРіРѕ РѕСЃС†РёР»Р»СЏС‚Рѕ...
-
+l.234 \begin
+            {figure}[h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-LaTeX Warning: File `rk-6.png' not found on input line 220.
-
-
-! Package pdftex.def Error: File `rk-6.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.220 ...degraphics[width=0.5\linewidth]{rk-6.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 220
-.
-(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 215--222
-
- []
+<010pi234.png, id=52, 1026.83624pt x 482.55281pt>
+File: 010pi234.png Graphic file (type png)
+ <use 010pi234.png>
+Package pdftex.def Info: 010pi234.png used on input line 237.
+(pdftex.def)             Requested size: 523.53055pt x 246.0324pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3] [4]
-
-LaTeX Warning: File `rk-7.png' not found on input line 226.
-
-
-! Package pdftex.def Error: File `rk-7.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.226 ...degraphics[width=0.5\linewidth]{rk-7.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `rk-8.png' not found on input line 231.
-
-
-! Package pdftex.def Error: File `rk-8.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.231 ...degraphics[width=0.5\linewidth]{rk-8.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: File `dp-7.png' not found on input line 236.
-
-
-! Package pdftex.def Error: File `dp-7.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.236 ...degraphics[width=0.5\linewidth]{dp-7.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
-
- []
-
-[6]
-
-! LaTeX Error: File `osc2pi' not found.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264 ...ludegraphics[width=0.5\linewidth]{osc2pi}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.239 \newpage
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--267
-
- []
-
-
-LaTeX Warning: File `oscpi.png' not found on input line 279.
-
-
-! Package pdftex.def Error: File `oscpi.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.279 ...egraphics[width=0.5\linewidth]{oscpi.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+[8 <./010pi134.png (PNG copy)> <./010pi234.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1346,7 +1345,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1357,7 +1356,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1368,7 +1367,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1379,14 +1378,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -1395,7 +1394,7 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -1404,7 +1403,7 @@ Try to go on, since this might almost work.
 ! Extra }, or forgotten $.
 <recently read> }
                  
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1415,7 +1414,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1423,7 +1422,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1434,7 +1433,7 @@ my insertion and my current dilemma will both disappear.
 ! Misplaced alignment tab character &.
 \math@cr@@@ ->\ifst@rred \nonumber \fi &
                                         \relax \make@display@tag \ifst@rred ...
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1446,7 +1445,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \cr.
 \math@cr@@@ ...fi \global \advance \row@ \@ne \cr 
                                                   
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1457,7 +1456,7 @@ might try typing `S' now just to see what is salvageable.
 ! Extra }, or forgotten \endgroup.
 \gmeasure@ ...avetaglength@ \crcr #1\math@cr@@@ }}
                                                   \restorecounters@ \if@fleq...
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1468,7 +1467,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1476,7 +1475,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1487,7 +1486,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1498,7 +1497,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1509,14 +1508,14 @@ my insertion and my current dilemma will both disappear.
 ! Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I'm guessing that you meant to end an alignment here.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -1525,7 +1524,7 @@ Try to go on, since this might almost work.
 ! Missing { inserted.
 <inserted text> 
                 {
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -1534,7 +1533,7 @@ Try to go on, since this might almost work.
 ! Extra }, or forgotten $.
 <recently read> }
                  
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1545,7 +1544,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing number, treated as zero.
 <to be read again> 
                    \relax 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1554,7 +1553,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    \relax 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1566,7 +1565,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1574,7 +1573,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1585,16 +1584,16 @@ my insertion and my current dilemma will both disappear.
 ! Missing $$ inserted.
 <to be read again> 
                    \par 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 Displays can use special alignments (like \eqalignno)
 only if nothing but the alignment itself is between $$'s.
 
-[8]
+[9]
 ! Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -1605,7 +1604,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1613,7 +1612,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1621,7 +1620,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Extra }, or forgotten \endgroup.
 \endgather ->\math@cr \black@ \totwidth@ \egroup 
                                                  $$\ignorespacesafterend 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1632,7 +1631,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.292 \end{gather}
+l.251 \end{gather}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1643,126 +1642,521 @@ my insertion and my current dilemma will both disappear.
 ! Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.292 \end{gather}
+l.251 \end{gather}
                   
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
+<01001201.png, id=59, 481.8pt x 361.35pt>
+File: 01001201.png Graphic file (type png)
+ <use 01001201.png>
+Package pdftex.def Info: 01001201.png used on input line 254.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
 
-LaTeX Warning: File `solve_plus.png' not found on input line 296.
+Underfull \hbox (badness 10000) in paragraph at lines 253--255
 
+ []
 
-! Package pdftex.def Error: File `solve_plus.png' not found.
+[10 <./01001201.png (PNG copy)>] <01001301.png, id=63, 481.8pt x 361.35pt>
+File: 01001301.png Graphic file (type png)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+<use 01001301.png>
+Package pdftex.def Info: 01001301.png used on input line 257.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+[11 <./01001301.png (PNG copy)>] <01002301.png, id=67, 481.8pt x 361.35pt>
+File: 01002301.png Graphic file (type png)
+
+<use 01002301.png>
+Package pdftex.def Info: 01002301.png used on input line 260.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+[12 <./01002301.png (PNG copy)>] <uselessfp.png, id=72, 481.8pt x 338.01282pt>
+File: uselessfp.png Graphic file (type png)
+
+<use uselessfp.png>
+Package pdftex.def Info: uselessfp.png used on input line 263.
+(pdftex.def)             Requested size: 481.79881pt x 338.01198pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
+
+ []
+
+[13 <./uselessfp.png (PNG copy)>]
+<period12.png, id=76, 1026.83624pt x 482.55281pt>
+File: period12.png Graphic file (type png)
+ <use period12.png>
+Package pdftex.def Info: period12.png used on input line 268.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+<period13.png, id=77, 1026.83624pt x 482.55281pt>
+File: period13.png Graphic file (type png)
+ <use period13.png>
+Package pdftex.def Info: period13.png used on input line 270.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--271
+
+ []
+
+[14 <./period12.png (PNG copy)> <./period13.png (PNG copy)>]
+<period23.png, id=81, 1026.83624pt x 482.55281pt>
+File: period23.png Graphic file (type png)
+ <use period23.png>
+Package pdftex.def Info: period23.png used on input line 273.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--274
+
+ []
+
+[15 <./period23.png (PNG copy)>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 \end{gather}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.284 \end{gather}
+                  
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.284 \end{gather}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.284 \end{gather}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.284 \end{gather}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 \end{gather}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced alignment tab character &.
+\math@cr@@@ ->\ifst@rred \nonumber \fi &
+                                        \relax \make@display@tag \ifst@rred ...
+l.284 \end{gather}
+                  
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\math@cr@@@ ...fi \global \advance \row@ \@ne \cr 
                                                   
-l.296 ...aphics[width=1\linewidth]{solve_plus.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.284 \end{gather}
+                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[9]
+! Extra }, or forgotten \endgroup.
+\gmeasure@ ...avetaglength@ \crcr #1\math@cr@@@ }}
+                                                  \restorecounters@ \if@fleq...
+l.284 \end{gather}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-LaTeX Warning: File `sovle_plus_100.png' not found on input line 303.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 \end{gather}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Package pdftex.def Error: File `sovle_plus_100.png' not found.
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.303 ...cs[width=1\linewidth]{sovle_plus_100.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-[10]
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.284 \end{gather}
+                  
+I'm guessing that you meant to end an alignment here.
 
-LaTeX Warning: File `solve_plus_250.png' not found on input line 311.
+! Missing { inserted.
+<inserted text> 
+                {
+l.284 \end{gather}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
+! Missing { inserted.
+<inserted text> 
+                {
+l.284 \end{gather}
+                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-! Package pdftex.def Error: File `solve_plus_250.png' not found.
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.284 \end{gather}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.311 ...cs[width=1\linewidth]{solve_plus_250.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.284 \end{gather}
+                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
 
-[11]
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.284 \end{gather}
+                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
-LaTeX Warning: File `min_3.png' not found on input line 327.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 \end{gather}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-! Package pdftex.def Error: File `min_3.png' not found.
+! Missing $$ inserted.
+<to be read again> 
+                   \par 
+l.284 \end{gather}
+                  
+Displays can use special alignments (like \eqalignno)
+only if nothing but the alignment itself is between $$'s.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 ...udegraphics[width=1\linewidth]{min_3.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[16]
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.284 \end{gather}
+                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-[12]
+! Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.284 \end{gather}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-LaTeX Warning: File `min_0_9.png' not found on input line 342.
+! Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.284 \end{gather}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
+! Extra }, or forgotten \endgroup.
+\endgather ->\math@cr \black@ \totwidth@ \egroup 
+                                                 $$\ignorespacesafterend 
+l.284 \end{gather}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! Package pdftex.def Error: File `min_0_9.png' not found.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.284 \end{gather}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.342 ...egraphics[width=1\linewidth]{min_0_9.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.284 \end{gather}
+                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
 
-[13] (./RungeKutta.aux)
+[17] <neshod12.png, id=91, 481.8pt x 361.35pt>
+File: neshod12.png Graphic file (type png)
+ <use neshod12.png>
+Package pdftex.def Info: neshod12.png used on input line 287.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
- ) 
+ []
+
+[18 <./neshod12.png (PNG copy)>] <neshod13.png, id=96, 481.8pt x 361.35pt>
+File: neshod13.png Graphic file (type png)
+
+<use neshod13.png>
+Package pdftex.def Info: neshod13.png used on input line 290.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
+
+ []
+
+[19 <./neshod13.png (PNG copy)>] <neshod23.png, id=100, 481.8pt x 361.35pt>
+File: neshod23.png Graphic file (type png)
+
+<use neshod23.png>
+Package pdftex.def Info: neshod23.png used on input line 293.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
+
+ []
+
+[20 <./neshod23.png (PNG copy)>] <neshod232.png, id=104, 481.8pt x 361.35pt>
+File: neshod232.png Graphic file (type png)
+
+<use neshod232.png>
+Package pdftex.def Info: neshod232.png used on input line 296.
+(pdftex.def)             Requested size: 481.79881pt x 361.34912pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
+
+ []
+
+[21 <./neshod232.png (PNG copy)>]
+<0211201.png, id=108, 1026.83624pt x 482.55281pt>
+File: 0211201.png Graphic file (type png)
+ <use 0211201.png>
+Package pdftex.def Info: 0211201.png used on input line 301.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+<0211202.png, id=109, 1026.83624pt x 482.55281pt>
+File: 0211202.png Graphic file (type png)
+ <use 0211202.png>
+Package pdftex.def Info: 0211202.png used on input line 303.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--304
+
+ []
+
+[22 <./0211201.png (PNG copy)> <./0211202.png (PNG copy)>]
+<0211203.png, id=113, 1026.83624pt x 482.55281pt>
+File: 0211203.png Graphic file (type png)
+ <use 0211203.png>
+Package pdftex.def Info: 0211203.png used on input line 306.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+[23 <./0211203.png (PNG copy)>]
+<rash31.png, id=117, 1026.83624pt x 482.55281pt>
+File: rash31.png Graphic file (type png)
+ <use rash31.png>
+Package pdftex.def Info: rash31.png used on input line 310.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+<rash32.png, id=118, 1026.83624pt x 482.55281pt>
+File: rash32.png Graphic file (type png)
+ <use rash32.png>
+Package pdftex.def Info: rash32.png used on input line 312.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--313
+
+ []
+
+[24 <./rash31.png (PNG copy)> <./rash32.png (PNG copy)>]
+<rash33.png, id=123, 1026.83624pt x 482.55281pt>
+File: rash33.png Graphic file (type png)
+ <use rash33.png>
+Package pdftex.def Info: rash33.png used on input line 315.
+(pdftex.def)             Requested size: 462.07204pt x 217.14674pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
+
+ []
+
+[25 <./rash33.png (PNG copy)>] (./RungeKutta.aux) ) 
 Here is how much of TeX's memory you used:
- 13830 strings out of 493029
- 258380 string characters out of 6136234
- 309430 words of memory out of 5000000
- 17046 multiletter control sequences out of 15000+600000
- 18742 words of font info for 62 fonts, out of 8000000 for 9000
+ 14401 strings out of 493029
+ 266628 string characters out of 6136234
+ 315689 words of memory out of 5000000
+ 17611 multiletter control sequences out of 15000+600000
+ 18432 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,14n,54p,907b,276s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sftt1200.pfb>
-Output written on RungeKutta.pdf (13 pages, 210612 bytes).
+ 55i,14n,54p,1072b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/
+dvips/cm-super/cm-super-t2a.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-sup
+er/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></us
+r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
+type1/public/cm-super/sfrm2074.pfb>
+Output written on RungeKutta.pdf (26 pages, 2713823 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 171 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
