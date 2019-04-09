@@ -73,9 +73,9 @@ void find_zero(double t1, double t2, double y11, double y12, double y21, double 
 
 int main(void)
 {
-    //find_period(0, 100000, 0, -1000, 1e-11, 1e-7, WRITE_ZEROES | WRITE_PERIODS);
-    solve_dp(0, 350, 0, -1000, 1e-11, STEPS_COUNT, "data.dat");
-    printRungeNumbers(0, 350, 0, -1000, 0);
+    solve_dp(0, 1000*M_PI, 0, 1, 1e-11, STEPS_COUNT | FULL_NORM | PRINT_H, "data.dat");
+    find_period(0, 100000, 0, -1000, 1e-11, 1e-7, WRITE_ZEROES | WRITE_PERIODS);
+    printRungeNumbers(0, 1000*M_PI, 0, 1, 0);
     return EXIT_SUCCESS;
 }
 
@@ -168,8 +168,8 @@ double f1(double t, double y1, double y2)
 
 double f2(double t, double y1, double y2)
 {
-    return -(1 + alpha*y1*y1)*y1 + cos(t);
-    return -4*y1;
+    //return -(1 + alpha*y1*y1)*y1 + cos(t);
+    return -y1;
     return y2;
     return t;
 }
@@ -196,6 +196,9 @@ double get_h(double h, double err, double tol)
 double jack(double t, double y1, double y2)
 {
     return (sqrt(9*alpha*alpha*pow(y1,4) + sin(t)*sin(t))/2.0);
+    return y1;
+    return y2;
+    return t;
 }
 
 void dorman_prince(double h, double y1, double y2, double t, double* res)
@@ -316,10 +319,11 @@ double solve_dp(double l, double r, double y1, double y2, double tol, unsigned i
 void printRungeNumbers(double l, double r, double y1, double y2, unsigned int attr)
 {
     double x9, x11, x7;
-    x9 = solve_dp(0, r, 0, 1, 1e-9, NO_WRITE | GET_LAST | attr, NULL);
-    x11 = solve_dp(0, r, 0, 1, 1e-11, NO_WRITE | GET_LAST | attr, NULL);
-    x7 = solve_dp(0, r, 0 , 1, 1e-7, NO_WRITE | GET_LAST | attr, NULL);
-    printf("%lf \n", (x7 - x9)/(x9 - x11));    
+    x9 = solve_dp(l, r, y1, y2, 1e-9, NO_WRITE | GET_LAST | attr, NULL);
+    x11 = solve_dp(l, r, y1, y2, 1e-11, NO_WRITE | GET_LAST | attr, NULL);
+    x7 = solve_dp(l, r, y1 , y2, 1e-7, NO_WRITE | GET_LAST | attr, NULL);
+    printf("\n");
+    printf("Runge Numer- %lf \n", (x7 - x9)/(x9 - x11));
 }
 int exist(vector * v, double val)
 {
